@@ -9,8 +9,14 @@
  * @author User
  */
 public interface IMap {
+    /**
+     * @return array with ships positions {x1,y1,x2,y2,x3...}
+     */
     public double[] getShips();
     public double[] updateShips();
-    public double[] getMap();
+    /**
+     * @return array of integer representing [x][y] coordinates of map
+     */
+    public int[][] getMap();
     public void init();
 }

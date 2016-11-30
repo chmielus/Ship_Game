@@ -9,16 +9,29 @@
  * @author User
  */
 public abstract class Obstacle {
-    private Vector2 position;
+    protected Vector2 position;
+    protected Vector2 size;
     
-    public Obstacle(){
-        this.position = new Vector2();
+    public Vector2 getPosition() {
+        return position;
+    }
+
+    public void setPosition(Vector2 position) {
+        this.position = position;
+    }
+
+    public Vector2 getSize() {
+        return size;
+    }
+
+    public void setSize(Vector2 size) {
+        this.size = size;
     }
     /**
      * 
      * @return 
      */
-    public abstract Vector2[] draw();
+    public abstract int[][] draw();
     /**
      * Finds points of collision between edge (v1,v2).
      * @param v1 
